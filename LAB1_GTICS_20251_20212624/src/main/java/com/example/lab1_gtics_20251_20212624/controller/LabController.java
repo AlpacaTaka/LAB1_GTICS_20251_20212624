@@ -24,7 +24,8 @@ public class LabController {
     }
     @PostMapping(value="/tomarPedido/guardar")
     public String guardarPedido(Pedido pedidoRecibido) {
-
+        this.pedido = pedidoRecibido;
+        System.out.println("Pedido recibido: " + pedidoRecibido.getNombreCliente());
         return "redirect:/resumenPedido";
     }
 
